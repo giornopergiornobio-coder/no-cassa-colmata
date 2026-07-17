@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex,nofollow">
+<title>Modulo petizione</title>
+</head>
+<body>
+<form name="petizione-cassa-colmata" method="POST" action="/grazie.html" data-netlify="true" netlify-honeypot="campo-esca">
+<input type="hidden" name="form-name" value="petizione-cassa-colmata">
+<p hidden><label>Non compilare: <input name="campo-esca"></label></p>
+<p><label>Nome <input type="text" name="nome"></label></p>
+<p><label>Cognome <input type="text" name="cognome"></label></p>
+<p><label>Comune <input type="text" name="comune"></label></p>
+<p><label>Provincia <input type="text" name="provincia"></label></p>
+<p><label>Email <input type="email" name="email"></label></p>
+<p><label>Telefono <input type="tel" name="telefono"></label></p>
+<p><label>Messaggio <textarea name="messaggio"></textarea></label></p>
+<p><label><input type="checkbox" name="adesione_petizione" value="si"> Adesione</label></p>
+<p><label><input type="checkbox" name="privacy" value="accettata"> Privacy</label></p>
+<p><label><input type="checkbox" name="aggiornamenti" value="si"> Aggiornamenti</label></p>
+<p><button type="submit">Invia</button></p>
+</form>
+</body>
+</html>
