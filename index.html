@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>No alla nuova cassa di colmata</title>
+  <meta name="description" content="Petizione civica contro la realizzazione di una nuova cassa di colmata.">
+  <style>
+    :root{--navy:#06243a;--blue:#0f4c6d;--red:#d51f2b;--paper:#f5f7f9;--ink:#10212d;--muted:#5b6b76}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:white}
+    a{text-decoration:none}.wrap{width:min(1080px,calc(100% - 36px));margin:auto}
+    .hero{min-height:76vh;display:flex;align-items:center;color:white;background:radial-gradient(circle at 70% 78%,rgba(83,152,185,.42),transparent 27%),linear-gradient(120deg,#031827 0%,#07334b 52%,#0b5573 100%)}
+    .hero-inner{padding:72px 0}.eyebrow{display:inline-block;border:1px solid rgba(255,255,255,.55);padding:7px 11px;font-size:12px;letter-spacing:1.5px;font-weight:700}
+    h1{font-size:clamp(44px,8vw,88px);line-height:.94;max-width:900px;margin:24px 0 20px;letter-spacing:-3px}
+    .lead{font-size:clamp(18px,2.5vw,25px);max-width:720px;line-height:1.45;color:#e7f2f7}
+    .btn{display:inline-block;margin-top:24px;padding:16px 26px;border-radius:6px;background:var(--red);color:#fff;font-weight:800}
+    section{padding:72px 0}.light{background:var(--paper)}h2{font-size:clamp(30px,4vw,46px);margin:0 0 18px}
+    .intro{max-width:820px;color:var(--muted);font-size:18px;line-height:1.7}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:34px}.card{background:white;border-radius:12px;padding:26px;box-shadow:0 10px 30px rgba(3,30,47,.08);border-top:4px solid var(--blue)}
+    .petition{display:grid;grid-template-columns:.8fr 1.2fr;gap:42px;align-items:start}
+    .panel{background:white;border-radius:14px;padding:28px;box-shadow:0 14px 40px rgba(3,30,47,.12)}
+    label{display:block;font-weight:700;margin:0 0 7px}input,textarea{width:100%;padding:13px 14px;border:1px solid #c9d3d9;border-radius:7px;font:inherit}
+    textarea{min-height:100px;resize:vertical}.field{margin-bottom:17px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    .check{display:flex;gap:10px;align-items:flex-start;margin:15px 0;color:#344550;font-size:14px;line-height:1.45}.check input{width:auto;margin-top:3px}
+    button{width:100%;border:0;border-radius:7px;background:var(--red);color:white;font-size:17px;font-weight:800;padding:16px;cursor:pointer}
+    .note{font-size:13px;color:var(--muted);line-height:1.5}.share{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}.share a{padding:11px 14px;border:1px solid #bfd0d8;border-radius:6px;color:var(--navy);font-weight:700}
+    footer{background:var(--navy);color:#d9e5ea;padding:28px 0;font-size:14px}
+    @media(max-width:760px){.cards,.petition,.grid{grid-template-columns:1fr}h1{letter-spacing:-1.5px}.hero{min-height:68vh}.hero-inner{padding:56px 0}section{padding:54px 0}}
+  </style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap hero-inner">
+    <span class="eyebrow">PETIZIONE CIVICA</span>
+    <h1>NO ALLA NUOVA<br>CASSA DI COLMATA</h1>
+    <p class="lead">Difendiamo il mare, la costa e il futuro della Riviera. Chiediamo trasparenza, soluzioni alternative e rispetto per l’ambiente marino.</p>
+    <a class="btn" href="#firma">FIRMA ORA</a>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <h2>Perché firmare</h2>
+    <p class="intro">Chiediamo alle istituzioni competenti di fermare la realizzazione di una nuova cassa di colmata e di valutare soluzioni alternative, trasparenti e rispettose dell’ambiente marino e della comunità locale.</p>
+    <div class="cards">
+      <article class="card"><h3>Trasparenza</h3><p>Accesso completo agli atti, ai dati ambientali e alle valutazioni tecniche.</p></article>
+      <article class="card"><h3>Tutela del mare</h3><p>Priorità alla salute dell’ecosistema costiero, alla pesca e alla qualità delle acque.</p></article>
+      <article class="card"><h3>Partecipazione</h3><p>Coinvolgimento reale dei cittadini nelle decisioni che incidono sul futuro della città.</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="firma" class="light">
+  <div class="wrap petition">
+    <div>
+      <h2>Firma la petizione</h2>
+      <p class="intro">I dati saranno utilizzati esclusivamente per registrare l’adesione e, solo con consenso separato, per inviare aggiornamenti sulla campagna.</p>
+      <div class="share">
+        <a id="whatsapp" href="#" target="_blank" rel="noopener">Condividi su WhatsApp</a>
+        <a id="facebook" href="#" target="_blank" rel="noopener">Condividi su Facebook</a>
+      </div>
+    </div>
+
+    <form class="panel" name="petizione-cassa-colmata" method="POST" data-netlify="true" netlify-honeypot="campo-esca" action="/grazie.html">
+      <input type="hidden" name="form-name" value="petizione-cassa-colmata">
+      <p hidden><label>Non compilare: <input name="campo-esca"></label></p>
+
+      <div class="grid">
+        <div class="field"><label for="nome">Nome *</label><input id="nome" name="nome" required></div>
+        <div class="field"><label for="cognome">Cognome *</label><input id="cognome" name="cognome" required></div>
+      </div>
+      <div class="grid">
+        <div class="field"><label for="comune">Comune *</label><input id="comune" name="comune" required></div>
+        <div class="field"><label for="provincia">Provincia *</label><input id="provincia" name="provincia" maxlength="2" required placeholder="AP"></div>
+      </div>
+      <div class="field"><label for="email">Email *</label><input id="email" type="email" name="email" required></div>
+      <div class="field"><label for="telefono">Telefono</label><input id="telefono" type="tel" name="telefono"></div>
+      <div class="field"><label for="messaggio">Messaggio facoltativo</label><textarea id="messaggio" name="messaggio"></textarea></div>
+
+      <label class="check"><input type="checkbox" name="adesione_petizione" value="si" required><span>Confermo di aderire alla petizione contro la nuova cassa di colmata. *</span></label>
+      <label class="check"><input type="checkbox" name="privacy" value="accettata" required><span>Acconsento al trattamento dei dati necessario alla gestione della petizione. *</span></label>
+      <label class="check"><input type="checkbox" name="aggiornamenti" value="si"><span>Desidero ricevere aggiornamenti sulla campagna. Consenso facoltativo.</span></label>
+
+      <button type="submit">REGISTRA LA MIA FIRMA</button>
+      <p class="note">Prima della diffusione pubblica va completata l’informativa privacy con i dati del titolare.</p>
+    </form>
+  </div>
+</section>
+
+<footer><div class="wrap">Petizione civica “No alla nuova cassa di colmata” · San Benedetto del Tronto</div></footer>
+
+<script>
+const u=encodeURIComponent(location.href),t=encodeURIComponent("Firma anche tu la petizione contro la nuova cassa di colmata");
+document.getElementById("whatsapp").href=`https://wa.me/?text=${t}%20${u}`;
+document.getElementById("facebook").href=`https://www.facebook.com/sharer/sharer.php?u=${u}`;
+</script>
+</body>
+</html>
