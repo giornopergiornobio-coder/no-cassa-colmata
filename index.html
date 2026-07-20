@@ -78,7 +78,7 @@
       </div>
     </div>
 
-    <form class="panel" name="petizione-cassa-colmata" method="POST" data-netlify="true" netlify-honeypot="campo-esca" action="/grazie.html">
+    <form class="panel" name="petizione-cassa-colmata" method="POST" data-netlify="true" data-netlify-recaptcha="true" netlify-honeypot="campo-esca" action="/grazie.html">
       <input type="hidden" name="form-name" value="petizione-cassa-colmata">
       <p hidden><label>Non compilare: <input name="campo-esca"></label></p>
 
@@ -98,6 +98,7 @@
       <label class="check"><input type="checkbox" name="privacy" value="accettata" required><span>Dichiaro di aver letto l’informativa e acconsento al trattamento dei dati necessario alla gestione della petizione da parte del Comitato No Discarica Marina. *</span></label>
       <label class="check"><input type="checkbox" name="aggiornamenti" value="si"><span>Desidero ricevere aggiornamenti sulla campagna. Consenso facoltativo.</span></label>
 
+      <div data-netlify-recaptcha="true"></div>
       <button type="submit">REGISTRA LA MIA FIRMA</button>
       <p class="note">Titolare del trattamento: Comitato No Discarica Marina.</p>
     </form>

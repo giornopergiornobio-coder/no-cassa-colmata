@@ -6,7 +6,7 @@
 <title>Modulo petizione</title>
 </head>
 <body>
-<form name="petizione-cassa-colmata" method="POST" action="/grazie.html" data-netlify="true" netlify-honeypot="campo-esca">
+<form name="petizione-cassa-colmata" method="POST" action="/grazie.html" data-netlify="true" data-netlify-recaptcha="true" netlify-honeypot="campo-esca">
 <input type="hidden" name="form-name" value="petizione-cassa-colmata">
 <p hidden><label>Non compilare: <input name="campo-esca"></label></p>
 <p><label>Nome <input type="text" name="nome"></label></p>
@@ -19,6 +19,7 @@
 <p><label><input type="checkbox" name="adesione_petizione" value="si"> Adesione</label></p>
 <p><label><input type="checkbox" name="privacy" value="accettata"> Privacy</label></p>
 <p><label><input type="checkbox" name="aggiornamenti" value="si"> Aggiornamenti</label></p>
+<div data-netlify-recaptcha="true"></div>
 <p><button type="submit">Invia</button></p>
 </form>
 </body>
