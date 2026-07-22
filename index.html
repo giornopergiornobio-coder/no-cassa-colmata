@@ -24,6 +24,7 @@
     .check{display:flex;gap:10px;align-items:flex-start;margin:15px 0;color:#344550;font-size:14px;line-height:1.45}.check input{width:auto;margin-top:3px}
     button{width:100%;border:0;border-radius:7px;background:var(--red);color:white;font-size:17px;font-weight:800;padding:16px;cursor:pointer}
     .note{font-size:13px;color:var(--muted);line-height:1.5}.share{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}.share a{padding:11px 14px;border:1px solid #bfd0d8;border-radius:6px;color:var(--navy);font-weight:700}
+    .privacy-link{display:inline;width:auto;padding:0;border:0;background:none;color:var(--blue);font:inherit;font-weight:800;text-decoration:underline}.privacy-modal{width:min(900px,calc(100% - 24px));height:min(86vh,780px);padding:0;border:0;border-radius:14px;overflow:hidden;box-shadow:0 24px 80px rgba(3,30,47,.35)}.privacy-modal::backdrop{background:rgba(3,24,39,.72)}.privacy-modal-head{height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 20px;background:var(--navy);color:white}.privacy-modal-head h2{margin:0;font-size:22px}.privacy-close{width:42px;padding:8px;border:1px solid rgba(255,255,255,.55);background:transparent;font-size:24px;line-height:1}.privacy-modal iframe{display:block;width:100%;height:calc(100% - 64px);border:0}
     .stat{display:block;font-size:34px;line-height:1;color:var(--red);margin-bottom:12px}.source{margin-top:24px;font-size:14px;color:var(--muted)}.source a{color:var(--blue);font-weight:700;text-decoration:underline}
     .request{display:grid;grid-template-columns:.85fr 1.15fr;gap:42px;align-items:start}.demands{margin:0;padding:0;list-style:none;counter-reset:item}.demands li{counter-increment:item;position:relative;padding:0 0 24px 58px;font-size:17px;line-height:1.55}.demands li::before{content:counter(item);position:absolute;left:0;top:0;width:38px;height:38px;display:grid;place-items:center;border-radius:50%;background:var(--red);color:white;font-weight:800}
     footer{background:var(--navy);color:#d9e5ea;padding:28px 0;font-size:14px}
@@ -95,7 +96,7 @@
       <div class="field"><label for="messaggio">Messaggio facoltativo</label><textarea id="messaggio" name="messaggio"></textarea></div>
 
       <label class="check"><input type="checkbox" name="adesione_petizione" value="si" required><span>Confermo di aderire alla petizione contro la discarica marina tra San Benedetto del Tronto e Grottammare. *</span></label>
-      <p class="note"><strong><a href="/privacy.html" target="_blank" rel="noopener" style="color:#0f4c6d;text-decoration:underline">Leggi l'Informativa privacy</a></strong> prima di prestare il consenso.</p>
+      <p class="note"><button class="privacy-link" type="button" id="open-privacy" aria-haspopup="dialog">Leggi l'Informativa privacy</button> prima di prestare il consenso.</p>
       <label class="check"><input type="checkbox" name="privacy" value="accettata" required><span>Dichiaro di aver letto l’informativa e acconsento al trattamento dei dati necessario alla gestione della petizione da parte del Comitato No Discarica Marina. *</span></label>
       <label class="check"><input type="checkbox" name="aggiornamenti" value="si"><span>Desidero ricevere aggiornamenti sulla campagna. Consenso facoltativo.</span></label>
 
@@ -106,12 +107,24 @@
   </div>
 </section>
 
+<dialog class="privacy-modal" id="privacy-dialog" aria-labelledby="privacy-title">
+  <div class="privacy-modal-head">
+    <h2 id="privacy-title">Informativa privacy</h2>
+    <button class="privacy-close" type="button" id="close-privacy" aria-label="Chiudi informativa">&times;</button>
+  </div>
+  <iframe src="/privacy.html" title="Informativa privacy completa"></iframe>
+</dialog>
+
+
 <footer><div class="wrap">Comitato No Discarica Marina · Petizione civica “No alla nuova cassa di colmata” · San Benedetto del Tronto</div></footer>
 
 <script>
 const u=encodeURIComponent(location.href),t=encodeURIComponent("Firma anche tu: no alla discarica marina tra San Benedetto del Tronto e Grottammare");
 document.getElementById("whatsapp").href=`https://wa.me/?text=${t}%20${u}`;
 document.getElementById("facebook").href=`https://www.facebook.com/sharer/sharer.php?u=${u}`;
+const privacyDialog=document.getElementById("privacy-dialog");
+document.getElementById("open-privacy").addEventListener("click",()=>privacyDialog.showModal());
+document.getElementById("close-privacy").addEventListener("click",()=>privacyDialog.close());
 </script>
 </body>
 </html>
