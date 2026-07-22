@@ -41,18 +41,19 @@
     .site-nav{background:rgba(41,57,58,.97);border-bottom:4px solid var(--blue);box-shadow:0 5px 18px rgba(17,31,32,.22)}
     .nav-inner{min-height:70px}.nav-brand{color:#fff;text-transform:uppercase;letter-spacing:.5px}.nav-links a{color:#fff;text-transform:uppercase;letter-spacing:.45px}.nav-links a:hover,.nav-links a:focus-visible{background:var(--blue);color:#112526}
     .hero{min-height:0;position:relative;overflow:hidden;background:var(--navy);isolation:isolate}
-    .hero::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(41,57,58,.98) 0%,rgba(41,57,58,.92) 50%,rgba(41,57,58,.68) 100%),url("assets/mare-cantiere.webp") center/cover;opacity:.34;z-index:0}
-    .hero-inner{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,850px);justify-content:start;align-items:center;padding:74px 0 78px}
+    .hero::before{content:"";position:absolute;inset:0;background:linear-gradient(120deg,#29393a 0%,#1d3031 100%);opacity:.95;z-index:0}
+    .hero-inner{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,720px) minmax(280px,1fr);gap:38px;align-items:center;padding:74px 0 78px}
     .eyebrow{border:2px solid #fff;background:#fff;color:var(--navy);padding:7px 10px;font-size:11px;letter-spacing:1.3px;font-weight:900}
     .campaign-wave{width:255px;margin:24px 0 20px;color:var(--blue)}.campaign-wave svg{display:block;width:100%;height:auto}
     h1,.campaign-declaration,.stat{font-family:"Arial Narrow",Impact,Haettenschweiler,sans-serif;text-transform:uppercase;font-stretch:condensed}
     h1{max-width:720px;margin:0;font-size:clamp(62px,8.3vw,116px);line-height:.79;letter-spacing:-3px;color:#fff}
     h1 .sea{display:block;color:var(--blue);font-size:.95em}h1 .small-word{font-size:.75em}
-    .campaign-declaration{display:grid;grid-template-columns:auto 1fr;gap:17px;align-items:center;margin:36px 0 0;max-width:670px;font-size:clamp(22px,3vw,38px);line-height:.96;font-weight:900;color:#fff}
+    .campaign-declaration{display:grid;grid-template-columns:auto 1fr;gap:22px;align-items:center;margin:36px 0 0;max-width:760px;font-size:clamp(22px,2.5vw,31px);line-height:.98;font-weight:900;color:#fff;text-transform:none}
     .campaign-declaration::before{content:"";width:82px;aspect-ratio:1;border:13px solid var(--red);border-radius:50%;background:linear-gradient(45deg,transparent 42%,var(--red) 43% 57%,transparent 58%)}
-    .campaign-declaration strong{display:block;color:var(--red);font-size:1.35em}.campaign-declaration mark{background:transparent;color:var(--yellow)}
+    .campaign-declaration strong{display:block;color:var(--red);font-size:1.5em;text-transform:uppercase}.campaign-declaration mark{background:transparent;color:var(--yellow);text-transform:uppercase}.declaration-line{display:block;white-space:nowrap}
     .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.btn{border-radius:0;margin-top:0;padding:16px 24px;background:var(--red);box-shadow:6px 6px 0 #fff;text-transform:uppercase;letter-spacing:.4px}.btn.secondary{background:var(--blue);color:#102526;box-shadow:6px 6px 0 var(--yellow)}
     .campaign-poster{position:relative;margin:0;transform:rotate(1.4deg);filter:drop-shadow(18px 20px 0 rgba(0,0,0,.25))}.campaign-poster img{display:block;width:100%;max-height:670px;object-fit:contain}.campaign-poster figcaption{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+    .hero-photo{margin:0;position:relative;border:8px solid #fff;box-shadow:15px 15px 0 var(--blue);transform:rotate(1.2deg)}.hero-photo img{display:block;width:100%;min-height:430px;object-fit:cover}.hero-photo figcaption{position:absolute;left:18px;right:18px;bottom:18px;margin:0;padding:10px 12px;background:var(--red);color:#fff;font-weight:900;text-transform:uppercase;font-size:13px;letter-spacing:.4px}
     section{padding:82px 0;scroll-margin-top:88px}h2{font-family:"Arial Narrow",Impact,Haettenschweiler,sans-serif;text-transform:uppercase;letter-spacing:-.8px;font-size:clamp(40px,5vw,64px);line-height:.95}h3,h4{color:var(--ink)}
     #progetto{background:#fff}.intro{color:var(--muted)}
     .campaign-photo{position:relative;min-height:360px;margin:38px 0 0;display:flex;align-items:flex-end;overflow:hidden;background:url("assets/mare-cantiere.webp") center/cover;border-bottom:10px solid var(--blue)}.campaign-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 30%,rgba(22,38,39,.9))}.campaign-photo p{position:relative;z-index:1;margin:0;padding:30px;color:#fff;font-size:clamp(22px,3vw,34px);font-weight:900;text-transform:uppercase;max-width:790px}.campaign-photo strong{color:var(--yellow)}
@@ -62,8 +63,8 @@
     #rassegna-stampa{background:#fff;border-top:10px solid var(--blue)}.press-card{border-radius:0;box-shadow:6px 6px 0 #dce4e4}.press-card.video{border-top:8px solid var(--red)}.press-card.article{border-top:8px solid var(--blue)}.press-link{color:var(--red)}
     .privacy-modal,.press-modal{border-radius:0}.privacy-modal-head{background:var(--navy);border-bottom:5px solid var(--blue)}.press-preview-actions .btn{box-shadow:none}
     footer{background:var(--navy);border-top:8px solid var(--blue);color:#fff}
-    @media(max-width:900px){.hero-inner{grid-template-columns:1fr}.campaign-poster{width:min(520px,88%);margin:0 auto}.campaign-photo{min-height:300px}}
-    @media(max-width:760px){.site-nav{position:relative}.hero-inner{padding:52px 0 66px;gap:42px}.campaign-wave{width:190px}h1{font-size:clamp(58px,19vw,86px);letter-spacing:-2px}.campaign-declaration{grid-template-columns:62px 1fr;font-size:25px}.campaign-declaration::before{width:58px;border-width:9px}.hero-actions{display:grid}.hero-actions .btn{text-align:center}.campaign-poster{width:100%;transform:none}.campaign-photo{min-height:240px;margin-left:-18px;margin-right:-18px}.campaign-photo p{padding:22px}.nav-inner{padding:11px 0}.nav-links a{font-size:12px}section{padding:58px 0}}
+    @media(max-width:1020px){.hero-inner{grid-template-columns:1fr}.hero-photo{width:min(680px,92%);margin:10px auto 0}.hero-photo img{min-height:320px}.campaign-poster{width:min(520px,88%);margin:0 auto}.campaign-photo{min-height:300px}}
+    @media(max-width:760px){.site-nav{position:relative}.hero-inner{padding:52px 0 66px;gap:42px}.campaign-wave{width:190px}h1{font-size:clamp(58px,19vw,86px);letter-spacing:-2px}.campaign-declaration{grid-template-columns:58px 1fr;gap:14px;font-size:clamp(18px,5.6vw,23px)}.campaign-declaration::before{width:58px;border-width:9px}.hero-actions{display:grid}.hero-actions .btn{text-align:center}.campaign-poster{width:100%;transform:none}.campaign-photo{min-height:240px;margin-left:-18px;margin-right:-18px}.campaign-photo p{padding:22px}.nav-inner{padding:11px 0}.nav-links a{font-size:12px}section{padding:58px 0}}
   </style>
 </head>
 <body>
@@ -86,11 +87,15 @@
         <svg viewBox="0 0 280 68" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 28c29 22 57 22 85-5 28 27 55 27 82 0 27 27 56 27 105 5-42 36-78 41-106 17-29 24-61 23-84-1C61 67 30 60 4 28Z" fill="currentColor"/><path d="M74 56c33 19 64 17 93-7 27 22 53 22 82 5-29 31-57 35-84 17-28 17-59 12-91-15Z" fill="#087fc1"/></svg>
       </div>
       <h1>Difendiamo <span class="small-word">il</span><span class="sea">nostro mare!</span></h1>
-      <p class="campaign-declaration"><span><strong>Diciamo no!</strong> alla <mark>“discarica marina”</mark> tra San Benedetto del Tronto e Grottammare.</span></p>
+      <p class="campaign-declaration"><span><strong>Diciamo no!</strong><span class="declaration-line">alla <mark>“discarica marina”</mark> tra</span><span class="declaration-line">San Benedetto del Tronto e</span><span class="declaration-line">Grottammare.</span></span></p>
       <div class="hero-actions">
         <a class="btn" href="#firma">Firma sul sito</a>
       </div>
     </div>
+    <figure class="hero-photo">
+      <img src="assets/mare-cantiere.webp" alt="Escavatore al lavoro sulla costa interessata dal progetto" width="2208" height="1920">
+      <figcaption>Difendiamo la costa e il nostro mare</figcaption>
+    </figure>
   </div>
 </header>
 
