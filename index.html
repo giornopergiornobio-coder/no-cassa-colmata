@@ -40,6 +40,7 @@
     .wrap{width:min(1160px,calc(100% - 36px))}
     .site-nav{background:rgba(41,57,58,.97);border-bottom:4px solid var(--blue);box-shadow:0 5px 18px rgba(17,31,32,.22)}
     .nav-inner{min-height:70px}.nav-brand{color:#fff;text-transform:uppercase;letter-spacing:.5px}.nav-links a{color:#fff;text-transform:uppercase;letter-spacing:.45px}.nav-links a:hover,.nav-links a:focus-visible{background:var(--blue);color:#112526}
+    .nav-toggle{display:none}
     .hero{min-height:0;position:relative;overflow:hidden;background:var(--navy);isolation:isolate}
     .hero::before{content:"";position:absolute;inset:0;background:linear-gradient(120deg,#29393a 0%,#1d3031 100%);opacity:.95;z-index:0}
     .hero-inner{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,720px) minmax(280px,1fr);gap:38px;align-items:center;padding:74px 0 78px}
@@ -64,14 +65,15 @@
     .privacy-modal,.press-modal{border-radius:0}.privacy-modal-head{background:var(--navy);border-bottom:5px solid var(--blue)}.press-preview-actions .btn{box-shadow:none}
     footer{background:var(--navy);border-top:8px solid var(--blue);color:#fff}
     @media(max-width:1020px){.hero-inner{grid-template-columns:1fr}.hero-photo{width:min(680px,92%);margin:10px auto 0}.campaign-poster{width:min(520px,88%);margin:0 auto}.campaign-photo{min-height:300px}}
-    @media(max-width:760px){.site-nav{position:relative}.hero-inner{padding:52px 0 66px;gap:42px}.campaign-wave{width:190px}h1{font-size:clamp(58px,19vw,86px);letter-spacing:-2px}.campaign-declaration{grid-template-columns:58px 1fr;gap:14px;font-size:clamp(18px,5.6vw,23px)}.campaign-declaration::before{width:58px;border-width:9px}.hero-actions{display:grid}.hero-actions .btn{text-align:center}.campaign-poster{width:100%;transform:none}.campaign-photo{min-height:240px;margin-left:-18px;margin-right:-18px}.campaign-photo p{padding:22px}.nav-inner{padding:11px 0}.nav-links a{font-size:12px}section{padding:58px 0}}
+    @media(max-width:760px){.site-nav{position:sticky}.nav-inner{display:grid;grid-template-columns:1fr auto;align-items:center;padding:10px 0;min-height:62px}.nav-brand{margin:0}.nav-toggle{display:flex;width:46px;height:42px;padding:9px;border:2px solid rgba(255,255,255,.7);background:transparent;flex-direction:column;justify-content:space-between}.nav-toggle span{display:block;width:100%;height:3px;background:#fff;transition:transform .2s,opacity .2s}.nav-toggle[aria-expanded="true"] span:nth-child(1){transform:translateY(9px) rotate(45deg)}.nav-toggle[aria-expanded="true"] span:nth-child(2){opacity:0}.nav-toggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-9px) rotate(-45deg)}.nav-links{display:none;grid-column:1/-1;flex-direction:column;align-items:stretch;gap:3px;overflow:visible;padding:10px 0 2px}.nav-links.is-open{display:flex}.nav-links a{padding:12px 10px;font-size:13px;border-top:1px solid rgba(255,255,255,.15)}.hero-inner{padding:52px 0 66px;gap:42px}.campaign-copy{min-width:0}.campaign-wave{width:190px}h1{font-size:clamp(46px,13vw,72px);line-height:.92;letter-spacing:-1px}h1 .small-word{display:block;margin:.08em 0 .04em;font-size:.62em;line-height:1}h1 .sea{display:block;font-size:.9em;line-height:.94;white-space:nowrap}.campaign-declaration{grid-template-columns:52px minmax(0,1fr);gap:12px;margin-top:32px;font-size:clamp(16px,4.7vw,21px);line-height:1.02}.campaign-declaration::before{width:50px;border-width:8px}.hero-actions{display:grid}.hero-actions .btn{text-align:center}.campaign-poster{width:100%;transform:none}.campaign-photo{min-height:240px;margin-left:-18px;margin-right:-18px}.campaign-photo p{padding:22px}section{padding:58px 0}}
   </style>
 </head>
 <body>
 <nav class="site-nav" aria-label="Indice della pagina">
   <div class="wrap nav-inner">
     <a class="nav-brand" href="#inizio">No Discarica Marina</a>
-    <ul class="nav-links">
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Apri menu"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="nav-links">
       <li><a href="#progetto">Il progetto</a></li>
       <li><a href="#richieste">Cosa chiediamo</a></li>
       <li><a href="#firma">Firma</a></li>
@@ -307,6 +309,9 @@
 
 <script>
 const u=encodeURIComponent(location.href),t=encodeURIComponent("Firma anche tu: no alla discarica marina tra San Benedetto del Tronto e Grottammare");
+const navToggle=document.querySelector(".nav-toggle"),navLinks=document.getElementById("nav-links");
+navToggle.addEventListener("click",()=>{const open=navToggle.getAttribute("aria-expanded")==="true";navToggle.setAttribute("aria-expanded",String(!open));navToggle.setAttribute("aria-label",open?"Apri menu":"Chiudi menu");navLinks.classList.toggle("is-open",!open)});
+navLinks.querySelectorAll("a").forEach(link=>link.addEventListener("click",()=>{navToggle.setAttribute("aria-expanded","false");navToggle.setAttribute("aria-label","Apri menu");navLinks.classList.remove("is-open")}));
 document.getElementById("whatsapp").href=`https://wa.me/?text=${t}%20${u}`;
 document.getElementById("facebook").href=`https://www.facebook.com/sharer/sharer.php?u=${u}`;
 const pressDialog=document.getElementById("press-dialog");
