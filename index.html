@@ -27,8 +27,9 @@
     .privacy-link{display:inline;width:auto;padding:0;border:0;background:none;color:var(--blue);font:inherit;font-weight:800;text-decoration:underline}.privacy-modal{width:min(900px,calc(100% - 24px));height:min(86vh,780px);padding:0;border:0;border-radius:14px;overflow:hidden;box-shadow:0 24px 80px rgba(3,30,47,.35)}.privacy-modal::backdrop{background:rgba(3,24,39,.72)}.privacy-modal-head{height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 20px;background:var(--navy);color:white}.privacy-modal-head h2{margin:0;font-size:22px}.privacy-close{width:42px;padding:8px;border:1px solid rgba(255,255,255,.55);background:transparent;font-size:24px;line-height:1}.privacy-modal iframe{display:block;width:100%;height:calc(100% - 64px);border:0}
     .stat{display:block;font-size:34px;line-height:1;color:var(--red);margin-bottom:12px}.source{margin-top:24px;font-size:14px;color:var(--muted)}.source a{color:var(--blue);font-weight:700;text-decoration:underline}
     .request{display:grid;grid-template-columns:.85fr 1.15fr;gap:42px;align-items:start}.demands{margin:0;padding:0;list-style:none;counter-reset:item}.demands li{counter-increment:item;position:relative;padding:0 0 24px 58px;font-size:17px;line-height:1.55}.demands li::before{content:counter(item);position:absolute;left:0;top:0;width:38px;height:38px;display:grid;place-items:center;border-radius:50%;background:var(--red);color:white;font-weight:800}
+    .press-head{display:flex;justify-content:space-between;gap:24px;align-items:end;margin-bottom:28px}.press-updated{margin:0;color:var(--muted);font-size:14px;white-space:nowrap}.press-group{margin-top:36px}.press-group h3{font-size:24px;margin:0 0 18px}.press-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.press-card{display:flex;flex-direction:column;min-height:245px;padding:24px;border:1px solid #d9e2e7;border-radius:12px;background:white}.press-card.video{border-top:4px solid var(--red)}.press-card.article{border-top:4px solid var(--blue)}.press-meta{display:flex;justify-content:space-between;gap:12px;color:var(--muted);font-size:13px}.press-tag{font-weight:800;text-transform:uppercase;letter-spacing:.6px;color:var(--red)}.press-card.article .press-tag{color:var(--blue)}.press-card h4{font-size:20px;line-height:1.3;margin:18px 0 10px}.press-card p{margin:0;color:var(--muted);line-height:1.55}.press-link{display:inline-flex;align-items:center;gap:7px;margin-top:auto;padding-top:22px;color:var(--navy);font-weight:800}.press-link::after{content:'\2197';font-size:18px}.press-note{margin-top:24px;color:var(--muted);font-size:14px;line-height:1.55}.press-note a{color:var(--blue);font-weight:700;text-decoration:underline}
     footer{background:var(--navy);color:#d9e5ea;padding:28px 0;font-size:14px}
-    @media(max-width:760px){.cards,.petition,.request,.grid{grid-template-columns:1fr}h1{letter-spacing:-1.5px}.hero{min-height:68vh}.hero-inner{padding:56px 0}section{padding:54px 0}}
+    @media(max-width:760px){.cards,.petition,.request,.grid,.press-grid{grid-template-columns:1fr}.press-head{display:block}.press-updated{margin-top:12px;white-space:normal}h1{letter-spacing:-1.5px}.hero{min-height:68vh}.hero-inner{padding:56px 0}section{padding:54px 0}}
   </style>
 </head>
 <body>
@@ -68,6 +69,118 @@
   </div>
 </section>
 
+<section id="rassegna-stampa">
+  <div class="wrap">
+    <div class="press-head">
+      <div>
+        <h2>Rassegna stampa</h2>
+        <p class="intro">Articoli, servizi e interviste sul progetto della nuova cassa di colmata e sulle alternative proposte per il porto.</p>
+      </div>
+      <p class="press-updated">Aggiornata al 22 luglio 2026</p>
+    </div>
+    <div class="press-group">
+      <h3>Video e interviste</h3>
+      <div class="press-grid">
+        <article class="press-card video">
+          <div class="press-meta"><span class="press-tag">Intervista</span><time datetime="2026-07-21">21 luglio 2026</time></div>
+          <h4>No alla Discarica Marina tra San Benedetto e Grottammare</h4>
+          <p>Jant intervista Francesco Torquati sulla ripresa della mobilitazione contro la nuova vasca.</p>
+          <a class="press-link" href="https://jant.it/notizie/no-alla-discarica-marina-tra-san-benedetto-del-tronto-e-grottammare" target="_blank" rel="noopener">Guarda su Jant</a>
+        </article>
+        <article class="press-card video">
+          <div class="press-meta"><span class="press-tag">Intervista</span><time datetime="2026-05-23">23 maggio 2026</time></div>
+          <h4>Intervista a Francesco Torquati</h4>
+          <p>Il presidente del Comitato illustra le criticit&agrave; della cassa di colmata e le prospettive per il porto.</p>
+          <a class="press-link" href="https://jant.it/notizie/intervista-a-francesco-torquati" target="_blank" rel="noopener">Guarda su Jant</a>
+        </article>
+        <article class="press-card video">
+          <div class="press-meta"><span class="press-tag">Video e foto</span><time datetime="2026-03-27">27 marzo 2026</time></div>
+          <h4>Futuro del porto e alternative alla vasca</h4>
+          <p>Riviera Oggi raccoglie gli interventi di Francesco Torquati e Massimo Rossi durante l'incontro pubblico.</p>
+          <a class="press-link" href="https://www.rivieraoggi.it/2026/03/27/433463/futuro-del-porto-francesco-torquati-abbiamo-unoccasione-enorme-per-rilanciare-la-nostra-citta/" target="_blank" rel="noopener">Guarda su Riviera Oggi</a>
+        </article>
+        <article class="press-card video">
+          <div class="press-meta"><span class="press-tag">Servizio TV</span><time datetime="2026-01-23">23 gennaio 2026</time></div>
+          <h4>Il Comitato presenta 1.500 firme contrarie</h4>
+          <p>Il servizio di Vera TV sugli incontri con Autorit&agrave; portuale e Capitaneria di porto.</p>
+          <a class="press-link" href="https://www.veratv.it/articoli/id-70358/cassa-di-colmata-il-comitato-presenta-1500-firme-contrarie" target="_blank" rel="noopener">Vedi su Vera TV</a>
+        </article>
+        <article class="press-card video">
+          <div class="press-meta"><span class="press-tag">Video e interviste</span><time datetime="2025-11-12">12 novembre 2025</time></div>
+          <h4>Cassa di colmata: il futuro dell'area portuale</h4>
+          <p>Immagini e videointerviste dalla conferenza stampa sul progetto e sull'apertura di via Lombroso.</p>
+          <a class="press-link" href="https://www.ilmascalzone.it/2025/11/cassa-di-colmata-e-apertura-di-via-lombroso-verso-il-futuro-immagini-e-video/" target="_blank" rel="noopener">Guarda su Il Mascalzone</a>
+        </article>
+      </div>
+    </div>
+    <div class="press-group">
+      <h3>Articoli</h3>
+      <div class="press-grid">
+        <article class="press-card article">
+          <div class="press-meta"><span class="press-tag">La Nuova Riviera</span><time datetime="2026-07-17">17 luglio 2026</time></div>
+          <h4>Riparte la mobilitazione contro la seconda vasca</h4>
+          <p>Annunciata la ripresa della raccolta firme e della campagna di sensibilizzazione sul territorio.</p>
+          <a class="press-link" href="https://www.lanuovariviera.it/category/dal-territorio/san-benedetto-del-tronto-notizie/seconda-vasca-di-colmata-torquati-rilancia-la-mobilitazione-riprenderemo-la-raccolta-firme/" target="_blank" rel="noopener">Leggi l'articolo</a>
+        </article>
+        <article class="press-card article">
+          <div class="press-meta"><span class="press-tag">Il Resto del Carlino</span><time datetime="2026-05-07">7 maggio 2026</time></div>
+          <h4>Danno o vantaggio? Il rebus cassa di colmata</h4>
+          <p>Il confronto pubblico tra i candidati sindaco su dragaggio, porto ed ecodragaggio.</p>
+          <a class="press-link" href="https://www.ilrestodelcarlino.it/ascoli/cronaca/danno-o-vantaggio-il-rebus-58512842" target="_blank" rel="noopener">Leggi l'articolo</a>
+        </article>
+        <article class="press-card article">
+          <div class="press-meta"><span class="press-tag">La Nuova Riviera</span><time datetime="2026-05-06">6 maggio 2026</time></div>
+          <h4>Vasca di colmata, ecodragaggio e futuro del porto</h4>
+          <p>Posizioni e impegni emersi nell'incontro promosso da Faro 3898 con i candidati sindaco.</p>
+          <a class="press-link" href="https://www.lanuovariviera.it/category/dal-territorio/san-benedetto-del-tronto-notizie/vasca-di-colmata-ecodragaggio-e-futuro-del-porto-il-confronto-tra-i-tre-candidati-sindaci/" target="_blank" rel="noopener">Leggi l'articolo</a>
+        </article>
+        <article class="press-card article">
+          <div class="press-meta"><span class="press-tag">Cronache Picene</span><time datetime="2026-03-23">23 marzo 2026</time></div>
+          <h4>&ldquo;No alla discarica marina&rdquo;: oltre 1.500 firme</h4>
+          <p>La petizione e l'annuncio dell'incontro pubblico dedicato alle alternative sostenibili.</p>
+          <a class="press-link" href="https://www.cronachepicene.it/2026/03/23/no-alla-discarica-marina-oltre-1-500-firme-tra-san-benedetto-e-grottammare/579370/" target="_blank" rel="noopener">Leggi l'articolo</a>
+        </article>
+        <article class="press-card article">
+          <div class="press-meta"><span class="press-tag">Riviera Oggi</span><time datetime="2026-03-11">11 marzo 2026</time></div>
+          <h4>Da cassa di colmata a hub della ricerca marittima</h4>
+          <p>La proposta del Comitato per un porto orientato a ricerca, recupero dei sedimenti e innovazione.</p>
+          <a class="press-link" href="https://www.rivieraoggi.it/2026/03/11/432590/san-benedetto-da-cassa-di-colmata-a-primo-hub-della-ricerca-marittima-deuropa-il-piano-per-il-porto-del-futuro/" target="_blank" rel="noopener">Leggi l'articolo</a>
+        </article>
+        <article class="press-card article">
+          <div class="press-meta"><span class="press-tag">La Nuova Riviera</span><time datetime="2026-02-05">5 febbraio 2026</time></div>
+          <h4>Consegnate 1.600 firme al commissario</h4>
+          <p>L'incontro del Comitato con la commissaria prefettizia e le richieste sulla tutela dell'area portuale.</p>
+          <a class="press-link" href="https://www.lanuovariviera.it/category/dal-territorio/san-benedetto-del-tronto-notizie/no-alla-cassa-di-colmata-consegnate-1-600-firme-al-commissario/" target="_blank" rel="noopener">Leggi l'articolo</a>
+        </article>
+        <article class="press-card article">
+          <div class="press-meta"><span class="press-tag">La Nuova Riviera</span><time datetime="2026-01-18">18 gennaio 2026</time></div>
+          <h4>Il Comitato incontra Autorit&agrave; portuale e Capitaneria</h4>
+          <p>Le 1.500 firme, gli incontri istituzionali e i dubbi su dimensioni e materiali della nuova vasca.</p>
+          <a class="press-link" href="https://www.lanuovariviera.it/category/dal-territorio/san-benedetto-del-tronto-notizie/seconda-vasca-di-colmata-il-comitato-incontra-autorita-portuale-e-capitaneria-consegnate-1-500-firme/" target="_blank" rel="noopener">Leggi l'articolo</a>
+        </article>
+        <article class="press-card article">
+          <div class="press-meta"><span class="press-tag">La Nuova Riviera</span><time datetime="2025-12-27">27 dicembre 2025</time></div>
+          <h4>Parte la petizione contro la seconda cassa</h4>
+          <p>La nascita della raccolta firme e le prime richieste di chiarezza e garanzie ambientali.</p>
+          <a class="press-link" href="https://www.lanuovariviera.it/category/dal-territorio/san-benedetto-del-tronto-notizie/parte-la-petizione-contro-la-seconda-cassa-di-colmata-al-porto-di-san-benedetto/" target="_blank" rel="noopener">Leggi l'articolo</a>
+        </article>
+        <article class="press-card article">
+          <div class="press-meta"><span class="press-tag">Il Resto del Carlino</span><time datetime="2025-12-14">14 dicembre 2025</time></div>
+          <h4>Il futuro del porto: no alla vasca, s&igrave; all'ecodragaggio</h4>
+          <p>Il confronto promosso da San Benedetto Partecipa con l'intervento del Comitato.</p>
+          <a class="press-link" href="https://www.ilrestodelcarlino.it/ascoli/cronaca/il-futuro-del-porto-vasca-74f27ec3" target="_blank" rel="noopener">Leggi l'articolo</a>
+        </article>
+        <article class="press-card article">
+          <div class="press-meta"><span class="press-tag">La Nuova Riviera</span><time datetime="2025-11-18">18 novembre 2025</time></div>
+          <h4>Vasca di colmata, striscioni e polemiche</h4>
+          <p>Francesco Torquati interviene sul rapporto tra sviluppo del porto e nuova area di stoccaggio.</p>
+          <a class="press-link" href="https://www.lanuovariviera.it/category/dal-territorio/san-benedetto-del-tronto-notizie/vasca-di-colmata-striscioni-e-polemiche-torquati-sviluppo-del-porto-non-puo-essere-vincolato-a-un-ricatto/" target="_blank" rel="noopener">Leggi l'articolo</a>
+        </article>
+      </div>
+      <p class="press-note">La selezione raccoglie i contenuti pubblici individuati tra il 22 luglio 2025 e il 22 luglio 2026. Per segnalare un articolo o un'intervista mancante: <a href="mailto:nodiscaricamarina@gmail.com">nodiscaricamarina@gmail.com</a>.</p>
+    </div>
+  </div>
+</section>
 <section id="firma">
   <div class="wrap petition">
     <div>
