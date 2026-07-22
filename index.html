@@ -53,17 +53,17 @@
     .campaign-declaration strong{display:block;color:var(--red);font-size:1.5em;text-transform:uppercase}.campaign-declaration mark{background:transparent;color:var(--yellow);text-transform:uppercase}.declaration-line{display:block;white-space:nowrap}
     .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.btn{border-radius:0;margin-top:0;padding:16px 24px;background:var(--red);box-shadow:6px 6px 0 #fff;text-transform:uppercase;letter-spacing:.4px}.btn.secondary{background:var(--blue);color:#102526;box-shadow:6px 6px 0 var(--yellow)}
     .campaign-poster{position:relative;margin:0;transform:rotate(1.4deg);filter:drop-shadow(18px 20px 0 rgba(0,0,0,.25))}.campaign-poster img{display:block;width:100%;max-height:670px;object-fit:contain}.campaign-poster figcaption{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
-    .hero-photo{margin:0;position:relative;border:8px solid #fff;box-shadow:15px 15px 0 var(--blue);transform:rotate(1.2deg)}.hero-photo img{display:block;width:100%;min-height:430px;object-fit:cover}.hero-photo figcaption{position:absolute;left:18px;right:18px;bottom:18px;margin:0;padding:10px 12px;background:var(--red);color:#fff;font-weight:900;text-transform:uppercase;font-size:13px;letter-spacing:.4px}
+    .hero-photo{margin:0;position:relative;aspect-ratio:16/9;overflow:hidden;border:8px solid #fff;box-shadow:15px 15px 0 var(--blue);transform:rotate(1.2deg)}.hero-photo img{position:absolute;top:0;right:0;display:block;width:145%;max-width:none;height:auto}
     section{padding:82px 0;scroll-margin-top:88px}h2{font-family:"Arial Narrow",Impact,Haettenschweiler,sans-serif;text-transform:uppercase;letter-spacing:-.8px;font-size:clamp(40px,5vw,64px);line-height:.95}h3,h4{color:var(--ink)}
     #progetto{background:#fff}.intro{color:var(--muted)}
-    .campaign-photo{position:relative;min-height:360px;margin:38px 0 0;display:flex;align-items:flex-end;overflow:hidden;background:url("assets/mare-cantiere.webp") center/cover;border-bottom:10px solid var(--blue)}.campaign-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 30%,rgba(22,38,39,.9))}.campaign-photo p{position:relative;z-index:1;margin:0;padding:30px;color:#fff;font-size:clamp(22px,3vw,34px);font-weight:900;text-transform:uppercase;max-width:790px}.campaign-photo strong{color:var(--yellow)}
+    .campaign-photo{position:relative;min-height:360px;margin:38px 0 0;display:flex;align-items:flex-end;overflow:hidden;background-image:url("assets/manifesto-difendiamo-il-mare.jpg");background-size:145% auto;background-position:right top;background-repeat:no-repeat;background-color:var(--navy);border-bottom:10px solid var(--blue)}.campaign-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 30%,rgba(22,38,39,.9))}.campaign-photo p{position:relative;z-index:1;margin:0;padding:30px;color:#fff;font-size:clamp(22px,3vw,34px);font-weight:900;text-transform:uppercase;max-width:790px}.campaign-photo strong{color:var(--yellow)}
     .cards{gap:20px}.card{border-radius:0;border:0;border-top:8px solid var(--blue);box-shadow:8px 8px 0 #dce4e4}.stat{font-size:42px;color:var(--red)}
     #richieste{background:var(--navy);color:#fff;border-top:10px solid var(--blue)}#richieste h2,#richieste h3,#richieste strong{color:#fff}#richieste .intro{color:#dce7e7}.demands li::before{border-radius:0;background:var(--red);box-shadow:4px 4px 0 var(--yellow);color:#fff}.demands li{border-bottom:1px solid rgba(255,255,255,.16);margin-bottom:20px}
     #firma{background:var(--paper)}.panel{border-radius:0;border-top:10px solid var(--red);box-shadow:12px 12px 0 rgba(41,57,58,.18)}input,textarea{border-radius:0;border:2px solid #aebcbd;background:#fff}input:focus,textarea:focus{outline:3px solid rgba(35,168,230,.35);border-color:var(--blue-dark)}button{border-radius:0;background:var(--red);text-transform:uppercase}.share a{border:2px solid var(--navy);border-radius:0;color:var(--navy);background:#fff}.share a:hover{background:var(--blue);color:#112526}
     #rassegna-stampa{background:#fff;border-top:10px solid var(--blue)}.press-card{border-radius:0;box-shadow:6px 6px 0 #dce4e4}.press-card.video{border-top:8px solid var(--red)}.press-card.article{border-top:8px solid var(--blue)}.press-link{color:var(--red)}
     .privacy-modal,.press-modal{border-radius:0}.privacy-modal-head{background:var(--navy);border-bottom:5px solid var(--blue)}.press-preview-actions .btn{box-shadow:none}
     footer{background:var(--navy);border-top:8px solid var(--blue);color:#fff}
-    @media(max-width:1020px){.hero-inner{grid-template-columns:1fr}.hero-photo{width:min(680px,92%);margin:10px auto 0}.hero-photo img{min-height:320px}.campaign-poster{width:min(520px,88%);margin:0 auto}.campaign-photo{min-height:300px}}
+    @media(max-width:1020px){.hero-inner{grid-template-columns:1fr}.hero-photo{width:min(680px,92%);margin:10px auto 0}.campaign-poster{width:min(520px,88%);margin:0 auto}.campaign-photo{min-height:300px}}
     @media(max-width:760px){.site-nav{position:relative}.hero-inner{padding:52px 0 66px;gap:42px}.campaign-wave{width:190px}h1{font-size:clamp(58px,19vw,86px);letter-spacing:-2px}.campaign-declaration{grid-template-columns:58px 1fr;gap:14px;font-size:clamp(18px,5.6vw,23px)}.campaign-declaration::before{width:58px;border-width:9px}.hero-actions{display:grid}.hero-actions .btn{text-align:center}.campaign-poster{width:100%;transform:none}.campaign-photo{min-height:240px;margin-left:-18px;margin-right:-18px}.campaign-photo p{padding:22px}.nav-inner{padding:11px 0}.nav-links a{font-size:12px}section{padding:58px 0}}
   </style>
 </head>
@@ -93,8 +93,7 @@
       </div>
     </div>
     <figure class="hero-photo">
-      <img src="assets/mare-cantiere.webp" alt="Escavatore al lavoro sulla costa interessata dal progetto" width="2208" height="1920">
-      <figcaption>Difendiamo la costa e il nostro mare</figcaption>
+      <img src="assets/manifesto-difendiamo-il-mare.jpg" alt="Escavatore al lavoro sulla costa interessata dal progetto" width="1080" height="1350">
     </figure>
   </div>
 </header>
