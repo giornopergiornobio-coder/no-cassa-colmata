@@ -28,8 +28,9 @@
     .stat{display:block;font-size:34px;line-height:1;color:var(--red);margin-bottom:12px}.source{margin-top:24px;font-size:14px;color:var(--muted)}.source a{color:var(--blue);font-weight:700;text-decoration:underline}
     .request{display:grid;grid-template-columns:.85fr 1.15fr;gap:42px;align-items:start}.demands{margin:0;padding:0;list-style:none;counter-reset:item}.demands li{counter-increment:item;position:relative;padding:0 0 24px 58px;font-size:17px;line-height:1.55}.demands li::before{content:counter(item);position:absolute;left:0;top:0;width:38px;height:38px;display:grid;place-items:center;border-radius:50%;background:var(--red);color:white;font-weight:800}
     .press-head{display:flex;justify-content:space-between;gap:24px;align-items:end;margin-bottom:28px}.press-updated{margin:0;color:var(--muted);font-size:14px;white-space:nowrap}.press-group{margin-top:36px}.press-group h3{font-size:24px;margin:0 0 18px}.press-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.press-card{display:flex;flex-direction:column;min-height:245px;padding:24px;border:1px solid #d9e2e7;border-radius:12px;background:white}.press-card.video{border-top:4px solid var(--red)}.press-card.article{border-top:4px solid var(--blue)}.press-meta{display:flex;justify-content:space-between;gap:12px;color:var(--muted);font-size:13px}.press-tag{font-weight:800;text-transform:uppercase;letter-spacing:.6px;color:var(--red)}.press-card.article .press-tag{color:var(--blue)}.press-card h4{font-size:20px;line-height:1.3;margin:18px 0 10px}.press-card p{margin:0;color:var(--muted);line-height:1.55}.press-link{display:inline-flex;align-items:center;gap:7px;margin-top:auto;padding-top:22px;color:var(--navy);font-weight:800}.press-link::after{content:'\2197';font-size:18px}.press-note{margin-top:24px;color:var(--muted);font-size:14px;line-height:1.55}.press-note a{color:var(--blue);font-weight:700;text-decoration:underline}
+    .press-modal{width:min(680px,calc(100% - 24px));padding:0;border:0;border-radius:14px;overflow:hidden;box-shadow:0 24px 80px rgba(3,30,47,.35)}.press-modal::backdrop{background:rgba(3,24,39,.72)}.press-preview-body{padding:30px}.press-preview-source{margin:0 0 12px;color:var(--red);font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:.6px}.press-preview-body h3{font-size:clamp(25px,4vw,34px);line-height:1.2;margin:0 0 16px}.press-preview-body>p:not(.press-preview-source){color:var(--muted);font-size:17px;line-height:1.6}.press-preview-actions{display:flex;gap:12px;align-items:center;margin-top:24px}.press-preview-actions .btn{margin:0}.press-preview-cancel{width:auto;padding:14px 18px;background:#e7ecef;color:var(--navy)}
     footer{background:var(--navy);color:#d9e5ea;padding:28px 0;font-size:14px}
-    @media(max-width:760px){.cards,.petition,.request,.grid,.press-grid{grid-template-columns:1fr}.press-head{display:block}.press-updated{margin-top:12px;white-space:normal}h1{letter-spacing:-1.5px}.hero{min-height:68vh}.hero-inner{padding:56px 0}section{padding:54px 0}}
+    @media(max-width:760px){.cards,.petition,.request,.grid,.press-grid{grid-template-columns:1fr}.press-head{display:block}.press-updated{margin-top:12px;white-space:normal}.press-preview-actions{flex-direction:column;align-items:stretch}.press-preview-actions .btn,.press-preview-cancel{width:100%;text-align:center}h1{letter-spacing:-1.5px}.hero{min-height:68vh}.hero-inner{padding:56px 0}section{padding:54px 0}}
   </style>
 </head>
 <body>
@@ -181,6 +182,21 @@
     </div>
   </div>
 </section>
+<dialog class="press-modal" id="press-dialog" aria-labelledby="press-preview-title">
+  <div class="privacy-modal-head">
+    <h2>Rassegna stampa</h2>
+    <button class="privacy-close" type="button" id="close-press" aria-label="Chiudi anteprima">&times;</button>
+  </div>
+  <div class="press-preview-body">
+    <p class="press-preview-source" id="press-preview-source"></p>
+    <h3 id="press-preview-title"></h3>
+    <p id="press-preview-summary"></p>
+    <div class="press-preview-actions">
+      <a class="btn" id="press-preview-open" href="#" target="_blank" rel="noopener">Apri la pubblicazione originale</a>
+      <button class="press-preview-cancel" type="button" id="cancel-press">Resta sul sito</button>
+    </div>
+  </div>
+</dialog>
 <section id="firma">
   <div class="wrap petition">
     <div>
@@ -235,6 +251,22 @@
 const u=encodeURIComponent(location.href),t=encodeURIComponent("Firma anche tu: no alla discarica marina tra San Benedetto del Tronto e Grottammare");
 document.getElementById("whatsapp").href=`https://wa.me/?text=${t}%20${u}`;
 document.getElementById("facebook").href=`https://www.facebook.com/sharer/sharer.php?u=${u}`;
+const pressDialog=document.getElementById("press-dialog");
+const pressSource=document.getElementById("press-preview-source");
+const pressTitle=document.getElementById("press-preview-title");
+const pressSummary=document.getElementById("press-preview-summary");
+const pressOpen=document.getElementById("press-preview-open");
+document.querySelectorAll(".press-link").forEach(link=>link.addEventListener("click",event=>{
+  event.preventDefault();
+  const card=link.closest(".press-card");
+  pressSource.textContent=`${card.querySelector(".press-tag").textContent} · ${card.querySelector("time").textContent}`;
+  pressTitle.textContent=card.querySelector("h4").textContent;
+  pressSummary.textContent=card.querySelector("p").textContent;
+  pressOpen.href=link.href;
+  pressDialog.showModal();
+}));
+document.getElementById("close-press").addEventListener("click",()=>pressDialog.close());
+document.getElementById("cancel-press").addEventListener("click",()=>pressDialog.close());
 const privacyDialog=document.getElementById("privacy-dialog");
 document.getElementById("open-privacy").addEventListener("click",()=>privacyDialog.showModal());
 document.getElementById("close-privacy").addEventListener("click",()=>privacyDialog.close());
