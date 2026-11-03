@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mangiare Bene in Famiglia – Piano settimanale</title>
+<meta name="description" content="Piano alimentare settimanale mediterraneo per tutta la famiglia: menù giornaliero, porzioni per età e lista della spesa.">
+<style>
+:root{--bg:#fbf8f1;--card:#fff;--ink:#27312a;--muted:#667067;--green:#3f7d4e;--green-d:#2d5e3a;--orange:#e98a2f;--line:#e6e0d2;--soft:#eef5ea}
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55}
+a{color:var(--green-d)}
+.wrap{max-width:1000px;margin:0 auto;padding:0 16px}
+header.hero{background:linear-gradient(135deg,var(--green),var(--green-d));color:#fff;padding:40px 0 34px}
+.hero h1{margin:0 0 8px;font-size:clamp(1.8rem,5vw,2.8rem);line-height:1.15}
+.hero p{margin:0;max-width:640px;opacity:.95;font-size:1.1rem}
+nav{position:sticky;top:0;background:rgba(251,248,241,.95);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);z-index:10}
+nav .wrap{display:flex;gap:4px;overflow-x:auto;padding-top:8px;padding-bottom:8px}
+nav a{white-space:nowrap;text-decoration:none;padding:6px 12px;border-radius:99px;font-weight:600;font-size:.92rem;color:var(--ink)}
+nav a:hover{background:var(--soft)}
+section{padding:34px 0 6px}
+h2{font-size:1.6rem;margin:0 0 6px;color:var(--green-d)}
+.lead{color:var(--muted);margin:0 0 18px}
+.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(210px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px}
+.card h3{margin:0 0 6px;font-size:1.05rem}
+.card .big{font-size:1.8rem}
+.tabs{display:flex;gap:6px;overflow-x:auto;padding-bottom:6px;margin-bottom:12px}
+.tabs button,.seg button{font:inherit;cursor:pointer;border:1px solid var(--line);background:#fff;padding:8px 14px;border-radius:99px;font-weight:600;white-space:nowrap;color:var(--ink)}
+.tabs button[aria-selected=true],.seg button[aria-pressed=true]{background:var(--green);color:#fff;border-color:var(--green)}
+.seg{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px}
+.meal{display:grid;grid-template-columns:110px 1fr;gap:6px 14px;padding:12px 0;border-bottom:1px dashed var(--line)}
+.meal:last-child{border:0}
+.meal .t{font-weight:700;color:var(--orange);text-transform:uppercase;font-size:.78rem;letter-spacing:.05em;padding-top:3px}
+.meal .d{margin:0}
+.meal small{display:block;color:var(--muted)}
+.tag{display:inline-block;background:var(--soft);color:var(--green-d);border-radius:6px;font-size:.75rem;padding:1px 7px;margin-left:6px;font-weight:600;vertical-align:middle}
+table{width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden;font-size:.94rem}
+th,td{padding:9px 12px;text-align:left;border-bottom:1px solid var(--line)}
+th{background:var(--soft);color:var(--green-d)}
+tr:last-child td{border:0}
+.tw{overflow-x:auto}
+.pyr li{margin-bottom:4px}
+.shop{columns:2 240px;column-gap:16px}
+.shop .card{break-inside:avoid;margin-bottom:14px}
+.shop ul{list-style:none;margin:0;padding:0}
+.shop label{display:block;padding:3px 0;cursor:pointer}
+.shop input:checked+span{text-decoration:line-through;color:var(--muted)}
+.note{background:#fff7e8;border:1px solid #f2d9a8;border-radius:12px;padding:14px 16px;margin-top:20px}
+.btn{font:inherit;cursor:pointer;border:0;background:var(--orange);color:#fff;font-weight:700;padding:9px 16px;border-radius:10px}
+footer{margin-top:40px;padding:24px 0 40px;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}
+@media(max-width:560px){.meal{grid-template-columns:1fr}}
+@media print{nav,.hero p,.seg,.tabs,.btn{display:none}#day-plan{display:none}.print-all{display:block!important}header.hero{background:none;color:#000;padding:0}}
+.print-all{display:none}
+</style>
+</head>
+<body>
+<header class="hero"><div class="wrap">
+<h1>🥗 Mangiare Bene in Famiglia</h1>
+<p>Un piano settimanale di dieta mediterranea, semplice ed economico, pensato per adulti, ragazzi e bambini che mangiano insieme alla stessa tavola.</p>
+</div></header>
+
+<nav><div class="wrap">
+<a href="#principi">Principi</a><a href="#porzioni">Porzioni</a><a href="#piano">Piano settimanale</a><a href="#spesa">Lista spesa</a><a href="#consigli">Consigli</a>
+</div></nav>
+
+<main class="wrap">
+
+<section id="principi">
+<h2>I principi del piano</h2>
+<p class="lead">Basato sulla dieta mediterranea e sulle linee guida CREA (Italia) e LARN: un unico menù per tutti, con porzioni adattate all'età.</p>
+<div class="grid">
+<div class="card"><div class="big">🌾</div><h3>Cereali integrali</h3><p>Pasta, riso, pane, farro e orzo: fonte principale di energia, meglio se integrali.</p></div>
+<div class="card"><div class="big">🥦</div><h3>Verdura e frutta</h3><p>Almeno 5 porzioni al giorno, di stagione e di colori diversi.</p></div>
+<div class="card"><div class="big">🫘</div><h3>Legumi e pesce</h3><p>Legumi 3–4 volte e pesce 2–3 volte a settimana. Carne rossa al massimo 1 volta.</p></div>
+<div class="card"><div class="big">🫒</div><h3>Grassi buoni</h3><p>Olio extravergine d'oliva a crudo, frutta secca; zuccheri e dolci con moderazione.</p></div>
+</div>
+</section>
+
+<section id="porzioni">
+<h2>Porzioni per ogni età</h2>
+<p class="lead">Stesso menù, quantità diverse. Valori indicativi per i pasti principali (peso a crudo).</p>
+<div class="tw"><table>
+<thead><tr><th>Alimento</th><th>Bambini 4–10 anni</th><th>Ragazzi 11–17 anni</th><th>Adulti</th></tr></thead>
+<tbody>
+<tr><td>Pasta / riso / cereali</td><td>40–60 g</td><td>70–90 g</td><td>80 g</td></tr>
+<tr><td>Pane</td><td>30–40 g</td><td>50–70 g</td><td>50 g</td></tr>
+<tr><td>Carne / pesce (secondo)</td><td>50–70 g</td><td>100–130 g</td><td>100–150 g</td></tr>
+<tr><td>Legumi secchi</td><td>30 g</td><td>40–50 g</td><td>50 g</td></tr>
+<tr><td>Formaggio fresco</td><td>40–50 g</td><td>80–100 g</td><td>100 g</td></tr>
+<tr><td>Verdura</td><td>100 g</td><td>150–200 g</td><td>200 g</td></tr>
+<tr><td>Frutta</td><td>100–150 g</td><td>150–200 g</td><td>150–200 g</td></tr>
+<tr><td>Olio extravergine (a pasto)</td><td>1 cucchiaino</td><td>2 cucchiaini</td><td>1 cucchiaio</td></tr>
+<tr><td><strong>Energia giornaliera indicativa</strong></td><td>1.400–1.800 kcal</td><td>2.000–2.800 kcal</td><td>1.800–2.500 kcal</td></tr>
+</tbody></table></div>
+</section>
+
+<section id="piano">
+<h2>Piano settimanale</h2>
+<p class="lead">Scegli il giorno: troverai i cinque pasti della giornata. Le note indicano come adattare per i più piccoli.</p>
+<div class="tabs" id="tabs" role="tablist"></div>
+<div class="card" id="day-plan"></div>
+<p style="margin-top:14px"><button class="btn" onclick="window.print()">🖨️ Stampa tutta la settimana</button></p>
+<div class="print-all" id="print-all"></div>
+</section>
+
+<section id="spesa">
+<h2>Lista della spesa settimanale</h2>
+<p class="lead">Per una famiglia di 4 persone (2 adulti + 2 figli). Spunta quello che hai già in casa.</p>
+<div class="seg" id="people-seg" aria-label="Componenti famiglia">
+<button data-m="0.75">2–3 persone</button><button data-m="1" aria-pressed="true">4 persone</button><button data-m="1.5">5–6 persone</button>
+</div>
+<div class="shop" id="shop"></div>
+</section>
+
+<section id="consigli">
+<h2>Consigli pratici</h2>
+<div class="grid">
+<div class="card"><h3>💧 Bere acqua</h3><p>1,5–2 litri al giorno per gli adulti, 1–1,5 per i bambini. Niente bibite zuccherate.</p></div>
+<div class="card"><h3>🍽️ Mangiare insieme</h3><p>Pasti a tavola, senza schermi: i bambini imparano dall'esempio dei genitori.</p></div>
+<div class="card"><h3>🏃 Muoversi</h3><p>Almeno 60 minuti di gioco/attività al giorno per i ragazzi, 30 minuti per gli adulti.</p></div>
+<div class="card"><h3>🛒 Spesa intelligente</h3><p>Prodotti di stagione, legumi secchi e cereali sfusi: più sani e più economici.</p></div>
+<div class="card"><h3>🔁 Variare</h3><p>Puoi scambiare tra loro i giorni o sostituire verdure e pesce con quelli di stagione.</p></div>
+<div class="card"><h3>🍪 Sgarri</h3><p>Un dolce o una pizza nel weekend non rovinano nulla: conta l'equilibrio della settimana.</p></div>
+</div>
+<div class="note"><strong>⚠️ Importante.</strong> Questo piano ha scopo informativo e di educazione alimentare per persone sane. Non sostituisce il parere di medico, pediatra o dietista. In caso di allergie, intolleranze, celiachia, diabete, gravidanza, patologie o necessità di dimagrire/ingrassare, rivolgiti a un professionista. Per i bambini sotto i 4 anni e per l'alimentazione in gravidanza servono indicazioni specifiche.</div>
+</section>
+</main>
+
+<footer><div class="wrap">Fonti di riferimento: linee guida per una sana alimentazione CREA, LARN (SINU), piramide della dieta mediterranea. © Mangiare Bene in Famiglia</div></footer>
+
+<script>
+const DAYS=[
+{n:"Lunedì",m:{
+ colazione:["Latte (o bevanda di soia non zuccherata) con fiocchi d'avena e frutta fresca","Per i piccoli: latte con cereali integrali non zuccherati"],
+ spuntino:["Una mela"],
+ pranzo:["Pasta integrale al pomodoro e basilico","Zucchine trifolate e pane integrale","Per i ragazzi: aggiungere 1 cucchiaio di parmigiano"],
+ merenda:["Yogurt bianco con 2 noci"],
+ cena:["Frittata (2 uova a testa adulti, 1 bambini) con spinaci","Insalata mista, pane integrale, 1 arancia"]}},
+{n:"Martedì",m:{
+ colazione:["Yogurt greco con muesli e banana"],
+ spuntino:["Frutta di stagione"],
+ pranzo:["Pasta e ceci","Carote e finocchi crudi","Frutta"],
+ merenda:["Pane integrale con un filo di marmellata"],
+ cena:["Filetto di merluzzo al forno con patate e prezzemolo","Insalata di pomodori"]}},
+{n:"Mercoledì",m:{
+ colazione:["Pane integrale con ricotta e miele","Tè deteinato o latte"],
+ spuntino:["Una pera"],
+ pranzo:["Risotto alle verdure di stagione","Insalata verde","Frutta"],
+ merenda:["Frutta secca (mandorle, noci) – 20 g; per i piccoli, ben tritata"],
+ cena:["Petto di pollo ai ferri con limone","Broccoli al vapore e patata lessa"]}},
+{n:"Giovedì",m:{
+ colazione:["Latte con biscotti secchi integrali","Una fetta di crostata casalinga è ammessa"],
+ spuntino:["Una clementina o un kiwi"],
+ pranzo:["Gnocchi di patate al pomodoro (porzione moderata)","Fagiolini all'olio","Frutta"],
+ merenda:["Yogurt con frutta a pezzetti"],
+ cena:["Zuppa di lenticchie con crostini integrali","Formaggio fresco (mozzarella o ricotta)","Insalata di cavolo"]}},
+{n:"Venerdì",m:{
+ colazione:["Pane tostato con confettura e un bicchiere di latte"],
+ spuntino:["Frutta di stagione"],
+ pranzo:["Pasta al sugo di tonno o sgombro e pomodorini","Zucchine o melanzane grigliate","Frutta"],
+ merenda:["Crackers integrali e una carota"],
+ cena:["Minestrone di verdure con orzo o farro","Uova sode (1 bimbi, 2 adulti) o formaggio","Pane integrale"]}},
+{n:"Sabato",m:{
+ colazione:["Pancake di farina integrale e banana con yogurt (senza zucchero aggiunto)"],
+ spuntino:["Una mela o un frutto a scelta"],
+ pranzo:["Insalata di farro con verdure, mozzarella e olive","Frutta"],
+ merenda:["Gelato artigianale alla frutta o un dolcetto: sgarro settimanale 🍦"],
+ cena:["Pizza fatta in casa (o pizzeria) con verdure","Insalata mista","Per i ragazzi: una fetta in più"]}},
+{n:"Domenica",m:{
+ colazione:["Torta casalinga semplice (yogurt e limone) e latte o spremuta"],
+ spuntino:["Frutta fresca"],
+ pranzo:["Lasagne al forno con verdure o ragù leggero (porzione moderata)","Arrosto di tacchino o vitello (carne rossa max 1 volta/sett.)","Contorno di patate e insalata","Frutta"],
+ merenda:["Yogurt e frutta secca"],
+ cena:["Pesce al cartoccio (orata, branzino o salmone)","Verdure miste al forno","Pane integrale"]}}
+];
+const L={colazione:"Colazione",spuntino:"Spuntino",pranzo:"Pranzo",merenda:"Merenda",cena:"Cena"};
+const tabs=document.getElementById('tabs'),plan=document.getElementById('day-plan');
+function mealsHTML(d){return Object.keys(L).map(k=>{const [a,...r]=d.m[k];return `<div class="meal"><div class="t">${L[k]}</div><p class="d">${a}${r.map(x=>`<small>${x}</small>`).join('')}</p></div>`}).join('')}
+function show(i){
+ [...tabs.children].forEach((b,j)=>b.setAttribute('aria-selected',i===j));
+ plan.innerHTML=`<h3 style="margin-top:0;font-size:1.3rem">${DAYS[i].n}</h3>`+mealsHTML(DAYS[i]);
+ try{localStorage.setItem('day',i)}catch(e){}
+}
+DAYS.forEach((d,i)=>{const b=document.createElement('button');b.textContent=d.n;b.setAttribute('role','tab');b.onclick=()=>show(i);tabs.appendChild(b)});
+document.getElementById('print-all').innerHTML=DAYS.map(d=>`<div class="card" style="margin-bottom:10px;break-inside:avoid"><h3>${d.n}</h3>${mealsHTML(d)}</div>`).join('');
+let start=(new Date().getDay()+6)%7;
+show(start);
+
+/* Lista della spesa: quantità per 4 persone */
+const SHOP={
+"🌾 Cereali e derivati":[["Pasta integrale",1000,"g"],["Riso / farro / orzo",600,"g"],["Pane integrale",1500,"g"],["Fiocchi d'avena / muesli",400,"g"],["Patate",1500,"g"],["Farina integrale",300,"g"]],
+"🫘 Legumi":[["Ceci secchi",250,"g"],["Lenticchie secche",250,"g"]],
+"🥩 Carne, pesce, uova":[["Petto di pollo",500,"g"],["Tacchino / vitello (arrosto)",600,"g"],["Merluzzo (filetti)",500,"g"],["Orata/branzino/salmone",700,"g"],["Tonno o sgombro al naturale",250,"g"],["Uova",10,"pz"]],
+"🧀 Latticini":[["Latte",3,"l"],["Yogurt bianco/greco",1000,"g"],["Mozzarella",250,"g"],["Ricotta",250,"g"],["Parmigiano",100,"g"]],
+"🥦 Verdura":[["Zucchine, melanzane, broccoli",2000,"g"],["Spinaci",500,"g"],["Insalata mista",600,"g"],["Carote e finocchi",800,"g"],["Pomodori / passata",1500,"g"],["Fagiolini e verdure per minestrone",1200,"g"]],
+"🍎 Frutta":[["Mele e pere",2000,"g"],["Arance / clementine / kiwi",2000,"g"],["Banane",800,"g"],["Frutta secca (noci, mandorle)",150,"g"]],
+"🫒 Dispensa":[["Olio extravergine d'oliva",1,"bottiglia"],["Marmellata / miele",1,"vasetto"],["Biscotti secchi integrali",1,"conf."],["Erbe aromatiche, limoni",1,"mazzetto"]]
+};
+let mult=1;
+function fmt(q,u,m){let v=q*m;if(u==="g"){v=Math.round(v/50)*50;return v>=1000?(v/1000).toLocaleString('it-IT')+" kg":v+" g"}
+ if(u==="pz")return Math.round(v)+" uova";if(u==="l")return Math.round(v*2)/2+" l";return (v<1?1:Math.round(v))+" "+u}
+function renderShop(){
+ document.getElementById('shop').innerHTML=Object.entries(SHOP).map(([c,items])=>`<div class="card"><h3>${c}</h3><ul>${items.map(([n,q,u])=>`<li><label><input type="checkbox"> <span>${n} – <strong>${fmt(q,u,mult)}</strong></span></label></li>`).join('')}</ul></div>`).join('');
+}
+document.querySelectorAll('#people-seg button').forEach(b=>b.onclick=()=>{document.querySelectorAll('#people-seg button').forEach(x=>x.setAttribute('aria-pressed',x===b));mult=+b.dataset.m;renderShop()});
+renderShop();
+</script>
+</body>
+</html>
